@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let a= 5+5-10*4;
+let modulo= 5%3
+console.log(a)
+console.log(modulo)
+console.log(9<10)
+console.log(9>10)
+console.log(9>=10)
+console.log(9<=10)
+console.log(9=="9")
+console.log(9==="9")
+console.log(9!=10)
+console.log(9!==9)
+/*
+= 1 igual es asignacion de valor
+== 2 iguales es comparacion de valores
+=== 3 iguales es comparacion de tipo de dato y valor
+*/
+let i = 4;
+i++
+console.log(i)
+i--
+console.log(i)
+// ! - NOT: niega, es decir lo que es verdadero lo vuelve falsoy viceversa
+//|| - OR : cuando tengo 2 o mas condiciones con que una se cumpla, es decir sea verdadera el or validara
+//&& - AND : cuando tenga 2 o mas condiciones todas tienen que cumplirse, es decir ser verdaderas para que el and se cumpla.
+
+console.log(!true)
+console.log(!false)
+console.log((9===9)||(9==="9"))
+console.log((9===9)&&("9"===9))
+
+let edad=16
+if(edad > 17){
+    console.log("Eres mayor de edad")
+} else{
+    console.log("Eres menor de edad")
+}
+let hora = 21
+if (hora >=0 && hora <=5){
+    console.log("Dejame dormir")
+   } else if(hora >=6 && hora < 12){
+        console.log("Buenos dias")
+    }else if(hora > 12 && hora < 19){
+        console.log("Buenas tardes")
+    }else if(hora > 19 && hora <= 24){
+        console.log("Buenas noches")
+    }
+    //Operador ternario
+    console.log("operador ternario");
+    let eresMayor= (edad >=18)?"Eres mayor de edad": "Eres menor de edad"
+    console.log(eresMayor)
+
+    //Switch case
+    let dia=2
+    switch (dia) {
+        case 0:
+        console.log("domingo")
+            break;
+        case 1:
+        console.log("lunes")
+            break;
+        case 2:
+        console.log("Martes")
+            break;
+        case 3:
+        console.log("Miercoles")
+            break;
+        case 4:
+        console.log("Juevess")
+            break;
+        case 5:
+        console.log("Viernes")
+            break;
+        case 6:
+        console.log("Sabado")
+            break;
+        default:
+        console.log("El dia no existe")  
+            break;
+    }
+    
+    /*let contador=11;
+    while(contador < 12){
+       console.log("while" + contador); 
+        contador+=2;
+    }
+    do{
+        console.log("do while" + contador); 
+        contador++;
+    }while(contador < 12);
+    */
+   /*
+   for (let i = 0; i < 10; i++) {
+    console.log("for" + i);    
+    }
+    let numeros=[10,20,80,90]
+
+      for (let i = 0; i < numeros.length; i++) {
+        console.log(numeros[i]); 
+   }
+   const diego={
+       nombre:"Diego",
+       apellido:"Romero",
+       edad:28,
+   }
+   //el forIn variante ciclo for recorrer cada uno de las propiedades de los elemtnos primitivos
+   for (const key in diego) {
+    console.log(`Key:${key} Value:${diego[key]}`);
+           
+       }
+       //el forOf permite recorrer cada uno de los elementos en un objeto o en caso de array cada uno de los objetos
+    for (const elemento of numeros) {
+        console.log(elemento); 
+    }
+    let cadena="Hola Hackerman"
+    for (const caracter of cadena) {
+        console.log(caracter); 
+    }*/
+    
+    try{
+        console.log("En el try se agrega el codigo a evaluar");
+        console.log("Segundo mensaje en el try");  
+    }catch(error){
+        console.log("Catch,captura cualquier error surgido o lanzado en el try"); 
+    }finally{
+        console.log("El bloqye finally se ejecutara siempre al fina de un bloque try-catch"); 
+    }
+    //mensaje de error // usando try-finally-catch
+    try{
+    let num="Y";
+        if (isNaN(num)) {
+            throw new Error("Numero expresado en letras");
+        }
+        console.log(num*num)
+    }catch(error){
+        console.log(`Se produjo el siguiente error:${error}`);
+    }finally{
+    }
+    //break y continue// break rompe segun numerologia del arreglo//
+    const numeros=[1,2,10,0]
+    for (let i = 0; i < numeros.length; i++) {
+        console.log(numeros[i]);
+        if(i===4){
+            break;
+        }
+    }
+    //continue salta el arreglo segun numerologia del arreglo//
+    for (let i = 0; i < numeros.length; i++) {
+    if (i===2) {
+        continue;
+    } 
+    console.log(numeros[i]) 
+    }    
+    let nombre="leno"
+    edad=0
+    
+
+    const perro = {
+        nombre:nombre,
+        edad:edad,
+        raza:"callejero",
+        ladrar:function () {
+            console.log("guauu guauuu")
+            
+        }
+    }
+  
+    console.log(perro);
+    perro.ladrar()
+    const dog = {
+        nombre,
+        edad,
+        raza:"callejero",
+        ladra(){
+            console.log("guauu guauu guauuu")
+        }
+    }
+    console.log(dog)
+    dog.ladra();
+   //parametros rest
+   /*
+    function sumar(a,b,...c){
+      let resultado = a+b;
+
+      c.forEach(function(n){
+        resultado += n
+      });
+      return resultado;  
+      }
+
+      console.log(sumar(1,2));
+      console.log(sumar(1,2,3));
+      console.log(sumar(1,2,3,4));
+      */
+     
+      //parametro spread
+      const arr1=[1,2,3,4,5],
+      arr2 = [6,7,8,9,0];
+      console.log(arr1,arr2);
+      const arr3=[...arr1,...arr2];
+      console.log(arr3);
+
+
+      /*
+      const sumar = function(d,e){
+          return d+e;
+      }
+      */
+      // arrow function
+     const saludar = nombre => console.log(`hola ${nombre}`);
+      saludar("nicole");
+      const sumar = (a,b) => a+b
+   console.log(sumar(9,9));
+      numeros.forEach((el,index) => console.log(`${el} esta en la posicion${index}`));
+     
+     
+      //funcion constructora//
+      const animal={
+          //atributo//
+          nombre:"snoopy",
+          //metodos//
+          sonar(){
+            console.log("hago sonidos porque estoy vivo");
+          }
+      }
+      const animal2={
+          nombre:"woodstock",
+          sonar(){
+            console.log("hago sonidos porque estoy vivo");
+          }
+      }
+      console.log(animal);
+      console.log(animal2);
+
+    //Funcion constructora// se ocupa el upper camelcase
+      function Animal(nombre,genero,raza){
+          //   //atributo//
+    this.nombre=nombre;
+    this.genero=genero;
+    this.raza=raza;
+    } 
+    Animal.prototype.sonar= function(){
+        console.log(`Hago sonido porque estoy vivo ${this.nombre}`)
+     }
+    Animal.prototype.saludar =function(){
+        console.log(`hola me llamo ${this.nombre}`);
+     }
+
+     //Herencia prototipica
+     function cat(nombre,genero,raza,size){
+         this.super=Animal;
+         this.super(nombre,genero,raza,size);
+         this.size= size;
+         }
+         // cat tiene herencia de animal
+         cat.prototype= new Animal();
+         cat.prototype.constructor= cat;
+         // sobreescribir metodo del prototipo padre en el hijo
+         cat.prototype.sonar=function(){
+            console.log("soy un gato y mi sonido es miau")
+         }
+    const snoopy = new cat("Snoopy","Macho","perro"),
+     woodstock= new Animal("Woodstock","Hembra","pajaro");
+    console.log(snoopy);
+    console.log(woodstock);
+     snoopy.sonar();
+     snoopy.saludar();
+     woodstock.sonar();
+     woodstock.saludar();
+         //clases es una forma de sintaxis ,pero sigue siendo un prototipo.
+    class consolas extends Animal{
+        constructor(nombre,juego){
+        super(nombre,juego);
+        this.nombre=nombre;
+        this.juego=juego;
+        this.raza=null;
+        }
+        completo(){
+            console.log(`El juego  ${this.nombre} ${this.juego} esta completo`);
+        }
+queEres(){
+    console.log("eres un juego de rol");
+}
+
+    }     
+const finalFantasy= new consolas("FinalFantasy","7");
+console.log(finalFantasy)
+finalFantasy.completo();
+finalFantasy.saludar();
+finalFantasy.sonar();
+
+finalFantasy.queEres();
+
+
+    </script>
+</body>
+</html>

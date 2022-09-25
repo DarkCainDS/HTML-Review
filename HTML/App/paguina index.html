@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       let nombre= "Diego";
+       let apellido="Romero"
+       let saludo = "Hola mi nombre es" + nombre + "" + apellido + "";
+       let saludo2= `Hola mi nombre es  ${nombre} ${apellido}`;
+       console.log(saludo2)
+       let ul = `
+       <ul>
+            <li> primavera</li>
+            <li> invierno</li>
+            <li> otoño</li>
+            <li> verano</li>
+        </ul>`
+        console.log(ul)
+        function estoEsUnaFuncion(){
+            console.log("Uno")
+            console.log("Dos")
+            console.log("Tres")
+        }
+        estoEsUnaFuncion()
+        function unaFuncionQueDevuelveValor(){
+            console.log("uno")
+            console.log("dos")
+            console.log("tres")
+            return " La funcion ha retornado una cadena de texto"
+        }  
+        let valorDeFuncion = unaFuncionQueDevuelveValor();
+        console.log(valorDeFuncion)
+        
+        function saludar(nombre,apellido,edad){
+            console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad}`);
+
+        }
+        funcionDeclarada();
+        saludar("Diego", "Romero",28)
+       
+        function funcionDeclarada(){
+            console.log("Esto es una funcion declarada puede invocarse en cualquier parte de nuestro codigo incluso antes de que la funcion sea declarada")
+           
+        }
+        funcionDeclarada();
+        //funcion anonima
+        const funcionExpresada= function(){
+            console.log("Esto es una funcion expresada es decir, una funcionque se le ha asignado como valor a una variable,si invocamos esta funcion antes de su definicion js nos dira...")
+        
+        }
+        funcionExpresada()
+    const a=[]
+    const b=[1,true,"hola",["A","B","C"]]
+    console.log(a);
+    console.log(b);
+    console.log(b.length);
+    console.log(b[3][2])
+    console.log(b[2])
+
+    const colores=["verde","azul","rojo"]
+    console.log(colores)
+    colores.push("negro");
+    console.log(colores)
+    colores.pop();
+    console.log(colores);
+
+    colores.forEach(function(el,index){
+        console.log(`<li id=""${index}>${el}</li>`);
+    })
+    //los objetos dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama metodos//
+    const diego={
+        nombre:"Diego",
+        apellido:"romero",
+        edad:28,
+        hobbie:["codear", "jugar","anime"],
+        soltero:true,
+        contacto:"+56981716405",
+        email:"Diego.romero.s@hotmail.com"
+    }
+        console.log(diego);
+        console.log(diego["nombre"]);
+        console.log(diego.email);
+        console.log(diego.hobbie[1]);
+        console.log(diego.hasOwnProperty("nombre"))
+        console.log(diego.hasOwnProperty("nnacimiento"))
+        console.log(Object.keys(diego))
+        console.log(Object.values(diego))
+        </script> 
+</body>
+</html>
